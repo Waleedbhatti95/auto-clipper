@@ -1,0 +1,30 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+
+# Data and working directories
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep
+temp/*
+!temp/.gitkeep
+models/*
+!models/.gitkeep
+
+# Media & subtitle artifacts
+*.mp4
+*.wav
+*.ass
+*.srt
+
+# Environment configurations
+.env
+.env.*

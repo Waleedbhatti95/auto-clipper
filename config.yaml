@@ -1,0 +1,47 @@
+paths:
+  input_dir: "input"
+  output_dir: "output"
+  temp_dir: "temp"
+  models_dir: "models"
+
+audio_analysis:
+  sample_rate: 16000
+  peak_percentile: 90
+  min_peak_distance_sec: 3
+  clip_padding_before_sec: 5
+  clip_padding_after_sec: 10
+
+vision:
+  template_match_threshold: 0.8
+  frame_sample_fps: 2
+
+vision_analysis:
+  enabled: true
+  fps_to_sample: 2
+  downscale_height: 480
+  audio_weight: 0.5
+  vision_weight: 0.5
+
+scoring:
+  audio_weight: 0.5
+  motion_weight: 0.3
+  hud_weight: 0.2
+
+whisper:
+  model_size: "tiny"
+  language: "en"
+
+output:
+  max_clips: 3
+
+# NAYA SECTION: Video & Caption Settings
+video_output:
+  aspect_ratio: "9:16"          # Options: "9:16" (Shorts), "16:9" (Landscape)
+  clip_duration_sec: 15         # Default clip length (seconds)
+
+caption_styling:
+  font_name: "Arial"            # Font (e.g., Arial, Impact, Verdana)
+  font_size: 85                 # Font size
+  primary_color: "&H0000FFFF"   # Yellow (ASS format: &HAABBGGRR)
+  outline_color: "&H00000000"   # Black outline
+  animation: "pop"              # Options: "none", "fade", "pop"
